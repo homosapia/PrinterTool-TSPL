@@ -78,7 +78,7 @@ namespace WinFormsApp1
             EncodingItem encodingItem = EncodingList.SelectedItem as EncodingItem;
 
             var encoding = GetEncodingByCodePage(encodingItem.CodePage);
-            if(encoding == null)
+            if (encoding == null)
             {
                 encoding = GetEncodingByName(encodingItem.Name);
             }
@@ -202,6 +202,41 @@ namespace WinFormsApp1
             else
             {
                 MessageBox.Show("Ошибка отправки команды");
+            }
+        }
+
+        private void PrintALL_Click(object sender, EventArgs e)
+        {
+            var printer = Printers.SelectedItem as PrinterInfo;
+            if (printer == null || !printer.IsConnected)
+            { MessageBox.Show($"Выберите принтер"); return; }
+
+            if(EncodingList.Items.Count == 0)
+            {
+                MessageBox.Show($"Кодировки не найдены"); return;
+            }
+
+            foreach (EncodingItem encodingItem in EncodingList.Items)
+            {
+                var encoding = GetEncodingByCodePage(encodingItem.CodePage);
+                if (encoding == null)
+                {
+                    encoding = GetEncodingByName(encodingItem.Name);
+                }
+                var commandBytes = encoding.GetBytes(textBox1.Text);
+
+                // Отправляем команду
+                bool success = printerConnect.SendCommand(printer, commandBytes);
+
+                if (success)
+                {
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка отправки команды");
+                }
+
+                Thread.Sleep(1000);
             }
         }
     }
