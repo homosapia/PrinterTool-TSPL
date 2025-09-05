@@ -33,7 +33,7 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             tableLayoutPanel3 = new TableLayoutPanel();
-            Convert = new Button();
+            ConvertButton = new Button();
             print = new Button();
             EncodingList = new ComboBox();
             PrintALL = new Button();
@@ -104,7 +104,7 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 49.54296F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15.72212F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.4314442F));
-            tableLayoutPanel3.Controls.Add(Convert, 0, 0);
+            tableLayoutPanel3.Controls.Add(ConvertButton, 0, 0);
             tableLayoutPanel3.Controls.Add(print, 2, 0);
             tableLayoutPanel3.Controls.Add(EncodingList, 1, 0);
             tableLayoutPanel3.Controls.Add(PrintALL, 3, 0);
@@ -117,16 +117,16 @@
             tableLayoutPanel3.TabIndex = 1;
             tableLayoutPanel3.Paint += tableLayoutPanel3_Paint;
             // 
-            // Convert
+            // ConvertButton
             // 
-            Convert.Dock = DockStyle.Fill;
-            Convert.Location = new Point(3, 3);
-            Convert.Name = "Convert";
-            Convert.Size = new Size(115, 26);
-            Convert.TabIndex = 0;
-            Convert.Text = "Конвертировать";
-            Convert.UseVisualStyleBackColor = true;
-            Convert.Click += Convert_Click;
+            ConvertButton.Dock = DockStyle.Fill;
+            ConvertButton.Location = new Point(3, 3);
+            ConvertButton.Name = "ConvertButton";
+            ConvertButton.Size = new Size(115, 26);
+            ConvertButton.TabIndex = 0;
+            ConvertButton.Text = "Конвертировать";
+            ConvertButton.UseVisualStyleBackColor = true;
+            ConvertButton.Click += Convert_Click;
             // 
             // print
             // 
@@ -234,7 +234,7 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private TableLayoutPanel tableLayoutPanel3;
-        private Button Convert;
+        private Button ConvertButton;
         private Button print;
         private ComboBox EncodingList;
         private TableLayoutPanel tableLayoutPanel4;

@@ -6,9 +6,19 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BinaryKits.Zpl.Label" Version="3.2.1" />
+    <PackageReference Include="BinaryKits.Zpl.Labelary" Version="1.0.2" />
+    <PackageReference Include="BinaryKits.Zpl.Viewer" Version="1.2.1" />
+    <PackageReference Include="Hjg.Pngcs" Version="1.1.4" />
+    <PackageReference Include="InTheHand.Net.Bluetooth" Version="4.2.2" />
+    <PackageReference Include="Neodynamic.SDK.ThermalLabel" Version="14.0.25.701" />
+    <PackageReference Include="OpenLabel" Version="0.1.0" />
+    <PackageReference Include="SkiaSharp" Version="3.119.0" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.119.0" />
     <PackageReference Include="System.IO.Ports" Version="9.0.8" />
     <PackageReference Include="System.Management" Version="9.0.8" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.8" />
